@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="SoulMelody.RegisterUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SoulMelody"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="800"
+             >
+    <Grid>
+        <StackPanel>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBox x:Name="LName" FontSize="20"
+                         Text="Last Name"  
+                         Foreground="Gray"
+                         Width="250"          
+                         Margin="0,60,0,20"
+                         BorderBrush="Black" BorderThickness="1"
+                         TextAlignment="Center"></TextBox>
+                <TextBox x:Name="FName" FontSize="20"
+                         Text="First Name"                         
+                         Width="250"                    
+                         Foreground="Gray"
+                         Margin="0,0,0,20"
+                         BorderBrush="Black" BorderThickness="1"
+                         TextAlignment="Center"></TextBox>
+                <TextBox x:Name="Login" FontSize="20"
+                         Text="Login"  
+                         Foreground="Gray"
+                         Width="250"          
+                         Margin="0,0,0,20"
+                         BorderBrush="Black" BorderThickness="1"
+                         TextAlignment="Center"></TextBox>
+                <TextBox x:Name="Password" FontSize="20"
+                         Text="Password"                         
+                         Width="250"                    
+                         Foreground="Gray"
+                         Margin="0,0,0,20"
+                         BorderBrush="Black" BorderThickness="1"
+                         TextAlignment="Center"></TextBox>
+                
+                <TextBox x:Name="Email" FontSize="20"
+                         Text="Email"  
+                         Foreground="Gray"
+                         Width="250"          
+                         Margin="0,0,0,20"
+                         BorderBrush="Black" BorderThickness="1"
+                         TextAlignment="Center"></TextBox>
+                <Button x:Name="SubmitBtn" Height="30" Width="150" Margin="0,0,0,15" Content="Submit" Click="SubmitBtn_Click"></Button>
+                <Button x:Name="MakeFaceIdBtn" Height="30" Width="150" Margin="0,0,0,15" Content="Create FaceID" Click="MakeFaceIdBtn_Click"></Button>
+                <Button x:Name="CancelBtn" Height="30" Width="150" Content="Back" Click="CancelBtn_Click"></Button>
+                
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="SoulMelody.LoginUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SoulMelody"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"></RowDefinition>
+            <RowDefinition Height="170"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--<controls:RegisterForm>
+            
+        </controls:RegisterForm>-->
+
+        <Image Grid.Row="0" Source="study.png" Width="100" Margin="0,20,0,0"></Image>
+        <StackPanel Grid.Row="1">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Center" 
+                         Foreground="Gray">Username</Label>
+                <TextBox x:Name="Login" FontSize="20"                         
+                         Width="250"          
+                         Margin="0,10,0,10"
+                         BorderBrush="Black" BorderThickness="1"
+                         Foreground="Gray"
+                         TextAlignment="Center"></TextBox>
+                <Label FontSize="20" FontWeight="DemiBold" 
+                         Foreground="Gray" HorizontalAlignment="Center">Password</Label>
+                <PasswordBox x:Name="Password" FontSize="20"
+                         PasswordChar="*"                         
+                         Width="250"                    
+                         Foreground="Gray"
+                         BorderBrush="Black" BorderThickness="1"
+                         HorizontalContentAlignment="Center"
+                         
+                         ></PasswordBox>
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <Button x:Name="LoginBtn" Height="30" Width="150" Content="Enter" Margin="0,20,0,20" Click="LoginBtn_Click"></Button>
+            <!--<Button x:Name="RegisterBtn" Height="30" Width="150" Content="Register" Margin="0,0,0,20" Click="RegisterBtn_Click"></Button>-->
+            <!--<Button x:Name="FaceIdBtn" Height="30" Width="150" Margin="0,0,0,20" Content="FaceID" Click="FaceIdBtn_Click"></Button>-->
+            <Button x:Name="BackBtn" Height="30" Width="150" Content="Back" Click="BackBtn_Click"></Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

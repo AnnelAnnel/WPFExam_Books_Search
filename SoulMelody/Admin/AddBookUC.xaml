@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="SoulMelody.Admin.AddBookUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SoulMelody.Admin"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+        </Grid.RowDefinitions>
+     
+        <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Label FontSize="12" FontFamily="Helvetica" Foreground="Gray" Height="30" Margin="20,60,0,20">Name:</Label>
+            <Label FontSize="12" FontFamily="Helvetica" Foreground="Gray" Height="30" Margin="20,25,0,15">Author FName:</Label>
+            <Label FontSize="12" FontFamily="Helvetica" Foreground="Gray" Height="30" Margin="20,0,0,15">Author LName:</Label>
+            <Label FontSize="12" FontFamily="Helvetica" Foreground="Gray" Height="30" Margin="20,0,0,15">Genre:</Label>
+            <Label FontSize="12" FontFamily="Helvetica" Foreground="Gray" Height="30" Margin="20,0,0,20">Theme:</Label>
+
+
+        </StackPanel >
+
+
+        <StackPanel Grid.Column="1" Grid.Row="0" >
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+
+                <TextBox x:Name="BName" FontSize="14"
+                        Height="60"
+                         Foreground="Gray"
+                         Width="270"          
+                         Margin="0,60,0,20"
+                         BorderBrush="Black" BorderThickness="1"
+                         TextAlignment="Left"
+                         TextWrapping="Wrap"></TextBox>
+                <TextBox x:Name="AuthorFName" FontSize="14"
+                                                 
+                         Width="270"                    
+                         Foreground="Gray"
+                         Margin="0,0,0,20"
+                         BorderBrush="Black" BorderThickness="1"
+                         TextAlignment="Left"
+                         TextWrapping="Wrap"></TextBox>
+                <TextBox x:Name="AuthorLName" FontSize="14"                         
+                         Foreground="Gray"
+                         Width="270"          
+                         Margin="0,0,0,20"
+                         BorderBrush="Black" BorderThickness="1"
+                         TextAlignment="Left"
+                         TextWrapping="Wrap"></TextBox>
+
+                <ComboBox Name="GenresList" Height="25" Width="270" Margin="0,0,0,20" VerticalAlignment="Top"
+                          DisplayMemberPath="Name"
+                       SelectedValuePath="Id"></ComboBox>
+
+                <ComboBox Name="ThemesList" Height="25" Width="270" VerticalAlignment="Top"
+                          DisplayMemberPath="Name"
+                       SelectedValuePath="Id"
+                       >
+                    <!--SelectedValue="{Binding ThemeID, Mode=TwoWay}"-->
+                </ComboBox>
+                
+
+            </StackPanel>
+            
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Label FontSize="12" FontFamily="Helvetica" Foreground="Gray" Height="30" Margin="0,60,0,20">Description:</Label>
+            <Label FontSize="12" FontFamily="Helvetica" Foreground="Gray" Height="30" Margin="0,115,0,20">Location:</Label>
+        </StackPanel >
+
+        <StackPanel Grid.Column="3" Grid.Row="0">
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+
+                <TextBox x:Name="Description" FontSize="14"                       
+                         Foreground="Gray"
+                         Width="250"   
+                         Height="140"
+                         Margin="0,60,0,20"
+                         BorderBrush="Black" BorderThickness="1"
+                         TextAlignment="Left"
+                         TextWrapping="Wrap"></TextBox>
+
+                <ComboBox Name="LocationList" Height="25" Width="250" VerticalAlignment="Top"
+                          DisplayMemberPath="Name"
+                       SelectedValuePath="Id">
+                       <!--SelectedValue="{Binding LocationID, Mode=TwoWay}"-->
+                    
+                </ComboBox>
+
+
+
+            </StackPanel>
+        </StackPanel>
+
+        <DockPanel Grid.Row="1"  Grid.Column="1" Grid.ColumnSpan="2">
+            <Button x:Name="SubmitBtn" Height="30" Width="150" Margin="0,30,60,0" Content="Submit" Click="SubmitBtn_Click"></Button>
+
+            <Button x:Name="CancelBtn" Height="30" Width="150" Margin="0,30,0,0" Content="Back" Click="CancelBtn_Click"></Button>
+        </DockPanel>
+    </Grid>
+</UserControl>

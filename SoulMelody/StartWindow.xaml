@@ -1,0 +1,35 @@
+﻿<Window x:Class="SoulMelody.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SoulMelody"        
+        mc:Ignorable="d"
+        Title="Good Library" Height="600" Width="800" WindowStartupLocation="CenterScreen"
+        Background="White">
+
+    <Grid x:Name="startGrid">
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="menuGrid" Grid.Column="0">
+        <ListView x:Name="ListViewMenu" Background="Black" Foreground="White" FontSize="20" SelectedIndex="0">
+            --><!--<ListViewItem Height="60" Content="Users" VerticalAlignment="Center" Padding="20,0,0,0"></ListViewItem>
+            <ListViewItem Height="60" Content="Books" VerticalAlignment="Center" Padding="20,0,0,0"></ListViewItem>
+            <ListViewItem Height="60" Content="Genres" VerticalAlignment="Center" Padding="20,0,0,0"></ListViewItem>
+            <ListViewItem Height="60" Content="Themes" VerticalAlignment="Center" Padding="20,0,0,0"></ListViewItem>
+            <ListViewItem Height="60" Content="Authors" VerticalAlignment="Center" Padding="20,0,0,0"></ListViewItem>
+            <ListViewItem Height="60" Content="Locations" VerticalAlignment="Center" Padding="20,0,0,0"></ListViewItem>
+            <ListViewItem Height="60" Content="Exit" VerticalAlignment="Center" Padding="20,0,0,0"></ListViewItem>--><!--
+        </ListView>
+        </Grid>
+        <Grid x:Name="startGrid" Grid.Column="1">
+            --><!--<StackPanel x:Name="GreetingPanel" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,0">
+                <Label x:Name="Greeting" FontSize="40" FontFamily="Helvetica" FontWeight="Bold"></Label>
+                <Label FontSize="30" FontFamily="Helvetica" FontWeight="Normal" Content="Welcome to Good Library!"></Label>
+            </StackPanel>--><!--
+
+        </Grid>-->
+    </Grid>
+</Window>

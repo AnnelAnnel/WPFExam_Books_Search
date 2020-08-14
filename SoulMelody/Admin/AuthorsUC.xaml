@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="SoulMelody.Admin.AuthorsUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SoulMelody.Admin"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="GreetingPanel" Grid.Row="0"
+                    VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50,40,0,0">
+            <!--<Label x:Name="Greeting" FontSize="40" FontFamily="Helvetica" FontWeight="Bold"></Label>-->
+            <Label FontSize="20" FontFamily="Helvetica"
+                   FontWeight="Normal" Content="All Users:"></Label>
+            <ListView x:Name="Users" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <ListView.View>
+                    <GridView x:Name="UsersGridView">
+                        <GridViewColumn x:Name="userIdValue" DisplayMemberBinding="{Binding Path=Id}" Header="Id" Width="20"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=FName}" Header="First Name" Width="100"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=LName}" Header="Last Name" Width="100"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Login}" Header="Login" Width="100"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Password}" Header="Password" Width="100"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Email}" Header="Email" Width="100"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Role}" Header="Role" Width="100"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+        <!--<DockPanel Grid.Row="1" HorizontalAlignment="Center">
+            <Button x:Name="AddBtn" DockPanel.Dock="Left" Content="Add" Margin="0,0,50,0" Click="AddBtn_Click" ></Button>
+            <Button x:Name="EditBtn" DockPanel.Dock="Left" Content="Edit" Margin="0,0,50,0" Click="EditBtn_Click"></Button>
+            <Button x:Name="DeleteBtn" DockPanel.Dock="Left" Content="Delete" Click="DeleteBtn_Click"></Button>
+
+        </DockPanel>-->
+
+
+    </Grid>
+</UserControl>
